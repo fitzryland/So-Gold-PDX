@@ -1,2 +1,42 @@
 // CONTENT
 // This file includes the application of styles that will affect the elements that will be repeated throughout the application.
+body {
+	background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: font(lato);
+	font-weight: 300;
+	height: 100%;
+}
+.site_header {
+	line-height: 3em;
+	text-align: center;
+	text-shadow: 0.1em 0.1em 0 white;
+	@include bp(medium) {
+		line-height: 4em;
+	}
+	@include bp(large) {
+		line-height: 5em;
+	}
+	&--title {
+		font-size: 2.9em;
+		font-weight: 700;
+		@include bp(medium) {
+			font-size: 4em;
+		}
+		@include bp(large) {
+			font-size: 5em;
+		}
+	}
+	&--description {
+		font-size: 2.4em;
+		font-weight: 100;
+		@include bp(medium) {
+			font-size: 3.2em;
+		}
+		@include bp(large) {
+			font-size: 4em;
+		}
+	}
+}

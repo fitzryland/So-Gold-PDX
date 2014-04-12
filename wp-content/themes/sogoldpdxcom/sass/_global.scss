@@ -1,5 +1,27 @@
 // CONTENT
 // This file contains all non printing styles other than layout.
+$font: (
+	lato: ("Lato", Helvetica, sans-serif),
+	);
+
+@function map($targetMap, $mapList) {
+	$mapItem: $targetMap;
+	@each $mapPart in $mapList {
+		$mapItem: map-get($mapItem, $mapPart);
+	}
+	@return $mapItem;
+}
+@function color($colorTree) {
+	@return map($color, $colorTree);
+}
+@function font($fontTree) {
+	@return map($font, $fontTree);
+}
+@function size($sizeTree) {
+	@return map($size, $sizeTree);
+}
+
+
 @mixin group() {
 	&:after {
 		content: "";

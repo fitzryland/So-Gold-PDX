@@ -87,11 +87,14 @@ add_action( 'widgets_init', 'sogoldpdxcom_widgets_init' );
  * Enqueue scripts and styles.
  */
 function sogoldpdxcom_scripts() {
+	wp_enqueue_style( 'sogoldpdxcom-google_fonts', 'http://fonts.googleapis.com/css?family=Lato:300,400,900' );
 	wp_enqueue_style( 'sogoldpdxcom-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'sogoldpdxcom-navigation', get_template_directory_uri() . '/js/lib/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'sogoldpdxcom-skip-link-focus-fix', get_template_directory_uri() . '/js/lib/skip-link-focus-fix.js', array(), '20130115', true );
+
+	wp_enqueue_script( 'sogoldpdxcom-main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '20120206', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
