@@ -1,0 +1,9 @@
+// CONTENT
+// This file contains all non printing styles other than layout.
+@mixin group() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}

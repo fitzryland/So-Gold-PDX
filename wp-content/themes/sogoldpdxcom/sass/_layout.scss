@@ -1,0 +1,55 @@
+// CONTENT
+// This file contains all layout settings.
+// Layout is as anything that affects horizontal movement.
+
+// $breakpoint-no-queries: false;
+$breakpoint-no-query-fallbacks: true;
+
+$susy: (
+	gutters: 0.2
+);
+
+$layouts: (
+	small: (
+		break: 0em 37.5em,
+		grid: (
+			columns: 5,
+		)
+	),
+	medium: (
+		break: 37.5em 62em,
+		grid: (
+			columns: 9,
+		)
+	),
+	large: (
+		break: 62em,
+		grid: (
+			columns: 18,
+		),
+		fallback: ".lt-ie9"
+	)
+);
+@mixin bp($break-name) {
+	$layout: map-get($layouts, $break-name);
+	@if map-has-key($layout, "fallback") {
+		@include susy-breakpoint(map-get($layout, "break"), map-get($layout, "grid"), map-get($layout, "fallback")) {
+			@content;
+		}
+	} @else {
+		@include susy-breakpoint(map-get($layout, "break"), map-get($layout, "grid")) {
+			@content;
+		}
+	}
+}
+@mixin wrap() {
+	margin: 0 auto;
+	max-width: 80em;
+	padding: 1em;
+}
+@mixin row() {
+	clear: both;
+	display: block;
+	float: none;
+	@include group();
+}
