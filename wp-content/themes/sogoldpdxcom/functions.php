@@ -65,6 +65,10 @@ function sogoldpdxcom_setup() {
 endif; // sogoldpdxcom_setup
 add_action( 'after_setup_theme', 'sogoldpdxcom_setup' );
 
+function remove_acf_menu() {
+	remove_menu_page('edit.php?post_type=acf');
+}
+
 if ( ! defined( 'SOGOLD_ENVIRONMENT' ) || SOGOLD_ENVIRONMENT !== 'local' ) {
 	require_once(get_stylesheet_directory() . '/inc/acf-export.php');
 	add_action( 'admin_menu', 'remove_acf_menu', 999 );
