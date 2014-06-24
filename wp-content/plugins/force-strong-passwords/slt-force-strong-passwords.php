@@ -3,7 +3,7 @@
 /*
 Plugin Name: Force Strong Passwords
 Description: Forces users to use something strong when updating their passwords.
-Version: 1.3.2
+Version: 1.3.3
 Author: Steve Taylor
 Author URI: http://sltaylor.co.uk
 License: GPLv2
@@ -78,6 +78,8 @@ function slt_fsp_init() {
 // Enqueue force zxcvbn check script
 function slt_fsp_enqueue_force_zxcvbn_script() {
 	wp_enqueue_script( 'slt-fsp-force-zxcvbn', plugins_url( 'force-zxcvbn.min.js', __FILE__ ), array( 'jquery' ), '1.0' );
+	// Also change hint
+	wp_enqueue_script( 'slt-fsp-admin-js', plugins_url( 'js-admin.min.js', __FILE__ ), array( 'jquery' ), '1.0' );
 }
 
 
@@ -124,7 +126,8 @@ function slt_fsp_validate_strong_password( $errors, $user_data ) {
 		if ( SLT_FSP_USE_ZXCVBN ) {
 
 			// Check the strength passed from the zxcvbn meter
-			if ( $_POST['slt-fsp-pass-strength-result'] != __( 'Strong' ) ) {
+			$compare = html_entity_decode( __( 'Strong' ), ENT_QUOTES, 'UTF-8');
+			if ( ! empty( $_POST['slt-fsp-pass-strength-result'] ) && $_POST['slt-fsp-pass-strength-result'] != $compare ) {
 				$password_ok = false;
 			}
 

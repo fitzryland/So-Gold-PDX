@@ -1,10 +1,10 @@
 === Force Strong Passwords ===
-Contributors: gyrus, simonwheatley, sparanoid
+Contributors: gyrus, simonwheatley, sparanoid, jpry
 Donate link: http://www.babyloniantimes.co.uk/index.php?page=donate
 Tags: passwords, security, users, profile
 Requires at least: 3.5
-Tested up to: 3.8
-Stable tag: 1.3.2
+Tested up to: 3.8.2
+Stable tag: 1.3.3
 
 Forces users to enter something strong when updating their passwords.
 
@@ -45,6 +45,11 @@ Modifies the array of roles that are considered "weak", and for which the strong
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+
+= 1.3.3 =
+* zxcvbn password hints.
+* Now allows for non-Latin character set encoding when comparing zxcvbn meter result (thanks jpry!)
+
 = 1.3.2 =
 * Added Serbo-Croatian translation (thanks Borisa Djuraskovic!)
 
