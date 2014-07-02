@@ -23,9 +23,10 @@ jQuery(document).ready(function() {
 	// Gallery
 	var $galleryWrap = jQuery('#gallery_wrap_id'),
 		$galleryImages = jQuery('.gallery--image'),
+		$navImage = jQuery('.gallery_nav--image'),
+		$galleryClose = jQuery('#gallery_close_id'),
 		imagePad = 16,
 		$slider,
-		$navImage = jQuery('.gallery_nav--image'),
 		galleryWrap = function() {
 			if ( $body.hasClass('single-event-galleries') ) {
 				var winHeight = $win.height(),
@@ -86,6 +87,9 @@ jQuery(document).ready(function() {
 
 	$navImage.click(function() {
 		$slider.fadeIn();
+	});
+	$galleryClose.click(function() {
+		$slider.fadeOut();
 	});
 
 });

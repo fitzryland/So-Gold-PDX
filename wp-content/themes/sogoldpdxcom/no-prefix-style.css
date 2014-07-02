@@ -743,15 +743,11 @@ body {
 }
 
 a {
-  font-weight: 700;
   text-decoration: none;
-  text-shadow: 2px 2px 0px black, 2px 0px 0px black, 0px 2px 0px black, -2px 0px 0px black, 0px -2px 0px black, -2px -2px 0px black;
+  text-shadow: 1px 1px 0px black, 1px 0px 0px black, 0px 1px 0px black, -1px 0px 0px black, 0px -1px 0px black, -1px -1px 0px black;
 }
-a:link {
-  color: #df00db;
-}
-a:visited {
-  color: #bb00ba;
+a:link, a:visited {
+  color: white;
 }
 
 .site:after {
@@ -865,6 +861,12 @@ a:visited {
   right: 0;
 }
 
+.gallery--close {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
 .gallery--image {
   display: block;
   margin: 0 auto;

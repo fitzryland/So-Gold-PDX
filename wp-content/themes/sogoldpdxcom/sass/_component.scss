@@ -89,6 +89,12 @@
 }
 .gallery {
 	&--image_wrap {}
+	&--close {
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: index($z-gallery_stack, gallery--close);
+	}
 	&--image {
 		display: block;
 		margin: 0 auto;

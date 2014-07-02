@@ -1,5 +1,6 @@
 // CONTENT
 // This file contains all non printing styles other than layout.
+$white: #ffffff;
 $black: #000000;
 $darkGray: #404040;
 $pink: #df00db;
@@ -9,7 +10,7 @@ $font: (
 	lato: ("Lato", Helvetica, sans-serif),
 	);
 
-$z-gallery_stack: bx-wrapper;
+$z-gallery_stack: bx-wrapper, gallery--close;
 
 @function map($targetMap, $mapList) {
 	$mapItem: $targetMap;

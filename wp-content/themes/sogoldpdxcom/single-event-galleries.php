@@ -19,6 +19,7 @@ get_header(); ?>
 
 
         <div class="gallery_wrap" id="gallery_wrap_id">
+          <button class="gallery--close" id="gallery_close_id">done</button>
           <div class="gallery" id="gallery_id">
             <?php
             $photos = get_field('images');
