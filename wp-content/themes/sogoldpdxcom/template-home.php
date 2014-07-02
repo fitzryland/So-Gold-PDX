@@ -17,29 +17,29 @@
 <body <?php body_class(); ?> style="background-image: url(<?php echo $bgImage['url']; ?>);">
 <div id="page" class="hfeed site">
 
-	<header id="masthead" class="site_header" role="banner">
-		<h1 class="site_header--title"><?php bloginfo( 'name' ); ?></h1>
-		<h2 class="site_header--description"><?php bloginfo( 'description' ); ?></h2>
+	<header id="home_header_id" class="home_header" role="banner">
+		<div class="home_header--title_block" id="title_block_id">
+			<h1 class="home_header--title"><?php bloginfo( 'name' ); ?></h1>
+			<h2 class="home_header--description"><?php bloginfo( 'description' ); ?></h2>
+		</div>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>submit" class="submit_photos">Submit Photos</a>
+		<button class="event_photos_button" id="event_photos_button_id">Event Photos</button>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-					<div class="entry-content">
-						<?php the_content(); ?>
-					</div><!-- .entry-content -->
-
-				</article><!-- #post-## -->
-
-			<?php endwhile; // end of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	<div class="gallery_loop_wrap">
+		<div class="gallery_loop">
+			<?php
+			$gallery_query_args = array( 'post_type' => 'event-galleries' );
+			$gallery_query = new WP_Query($gallery_query_args);
+			while( $gallery_query->have_posts() ) : $gallery_query->the_post(); ?>
+				<a class="gallery_loop--thumbnail" href="<?php echo get_the_permalink(); ?>" title="<?php the_title(); ?>">
+					<?php echo acf_image( array(get_field('cover_image'), 'gallery_loop--thumbnail_image', 'thumbnail') ); ?>
+				</a>
+			<?php endwhile; ?>
+		</div>
+	</div>
 
 <?php get_footer(); ?>

@@ -7,6 +7,10 @@ Description: A theme for So Gold PDX
 Version: 0.
 Text Domain: sogoldpdxcom
 */
+.home_header, .site-branding {
+  text-shadow: 0.1em 0.1em 0 white;
+}
+
 /*
 Theme Name: _s
 Theme URI: http://underscores.me/
@@ -632,10 +636,6 @@ a:active {
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
-.hentry {
-  margin: 0 0 1.5em;
-}
-
 .byline,
 .updated {
   display: none;
@@ -644,12 +644,6 @@ a:active {
 .single .byline,
 .group-blog .byline {
   display: inline;
-}
-
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
 }
 
 .page-links {
@@ -747,62 +741,23 @@ body {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  color: #404040;
   font-family: "Lato", Helvetica, sans-serif;
   font-weight: 300;
+  padding: 0;
   height: 100%;
 }
 
-.site_header {
-  line-height: 3em;
-  text-align: center;
-  text-shadow: 0.1em 0.1em 0 white;
-}
-@media (min-width: 37.5em) and (max-width: 62em) {
-  .site_header {
-    line-height: 4em;
-  }
-}
-@media (min-width: 62em) {
-  .site_header {
-    line-height: 5em;
-  }
-}
-.lt-ie9 .site_header {
-  line-height: 5em;
-}
-.site_header--title {
-  font-size: 2.9em;
+a {
   font-weight: 700;
+  text-decoration: none;
+  text-shadow: 2px 2px 0px black, 2px 0px 0px black, 0px 2px 0px black, -2px 0px 0px black, 0px -2px 0px black, -2px -2px 0px black;
 }
-@media (min-width: 37.5em) and (max-width: 62em) {
-  .site_header--title {
-    font-size: 4em;
-  }
+a:link {
+  color: #df00db;
 }
-@media (min-width: 62em) {
-  .site_header--title {
-    font-size: 5em;
-  }
-}
-.lt-ie9 .site_header--title {
-  font-size: 5em;
-}
-.site_header--description {
-  font-size: 2.4em;
-  font-weight: 100;
-}
-@media (min-width: 37.5em) and (max-width: 62em) {
-  .site_header--description {
-    font-size: 3.2em;
-  }
-}
-@media (min-width: 62em) {
-  .site_header--description {
-    font-size: 4em;
-  }
-}
-.lt-ie9 .site_header--description {
-  font-size: 4em;
+a:visited {
+  color: #bb00ba;
 }
 
 .site:after {
@@ -810,49 +765,124 @@ body {
   display: table;
   clear: both;
 }
-@media (min-width: 0em) and (max-width: 37.5em) {
-  .site {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .site::after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
+
+.home_header {
+  line-height: 3em;
+  text-align: center;
+}
+.home_header:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 @media (min-width: 37.5em) and (max-width: 62em) {
-  .site {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .site::after {
-    content: " ";
-    display: block;
-    clear: both;
+  .home_header {
+    line-height: 4em;
   }
 }
 @media (min-width: 62em) {
-  .site {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .site::after {
-    content: " ";
-    display: block;
-    clear: both;
+  .home_header {
+    line-height: 5em;
   }
 }
-.lt-ie9 .site {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+.lt-ie9 .home_header {
+  line-height: 5em;
 }
-.lt-ie9 .site::after {
-  content: " ";
-  display: block;
+.home_header--title_block:after {
+  content: "";
+  display: table;
   clear: both;
+}
+.home_header--title {
+  font-size: 2.9em;
+  font-weight: 700;
+}
+@media (min-width: 37.5em) and (max-width: 62em) {
+  .home_header--title {
+    font-size: 4em;
+  }
+}
+@media (min-width: 62em) {
+  .home_header--title {
+    font-size: 5em;
+  }
+}
+.lt-ie9 .home_header--title {
+  font-size: 5em;
+}
+.home_header--description {
+  font-size: 2.4em;
+  font-weight: 100;
+}
+@media (min-width: 37.5em) and (max-width: 62em) {
+  .home_header--description {
+    font-size: 3.2em;
+  }
+}
+@media (min-width: 62em) {
+  .home_header--description {
+    font-size: 4em;
+  }
+}
+.lt-ie9 .home_header--description {
+  font-size: 4em;
+}
+
+.gallery_loop_wrap {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.gallery_loop {
+  margin: 0 auto;
+  max-width: 80em;
+  padding: 1em;
+}
+
+.submit_photos {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.site-title {
+  text-decoration: none;
+}
+
+.bx-wrapper {
+  background-color: rgba(0, 0, 0, 0.3);
+  left: 0;
+  padding: 0.5em;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.bx-prev, .bx-next {
+  position: fixed;
+  top: 50%;
+}
+
+.bx-prev {
+  left: 0;
+}
+
+.bx-next {
+  right: 0;
+}
+
+.gallery--image {
+  display: block;
+  margin: 0 auto;
+}
+
+.gallery_nav--image {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  display: block;
+  float: left;
+  height: 10em;
+  overflow: hidden;
+  width: 10em;
 }

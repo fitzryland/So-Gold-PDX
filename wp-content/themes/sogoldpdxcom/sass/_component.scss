@@ -2,14 +2,108 @@
 // This file includes all of the application of styles to specific elements.
 // will likely be broken into multiple files as needed.
 .site {
-	@include group();
-	@include bp(small) {
-		@include container;
-	}
+	@include group;
+}
+.home_header {
+	@extend %text-shadow;
+	line-height: 3em;
+	text-align: center;
+	@include group;
 	@include bp(medium) {
-		@include container;
+		line-height: 4em;
 	}
 	@include bp(large) {
-		@include container;
+		line-height: 5em;
+	}
+	&--title_block {
+		@include group;
+	}
+	&--title {
+		font-size: 2.9em;
+		font-weight: 700;
+		@include bp(medium) {
+			font-size: 4em;
+		}
+		@include bp(large) {
+			font-size: 5em;
+		}
+	}
+	&--description {
+		font-size: 2.4em;
+		font-weight: 100;
+		@include bp(medium) {
+			font-size: 3.2em;
+		}
+		@include bp(large) {
+			font-size: 4em;
+		}
+	}
+}
+.gallery_loop_wrap {
+	background-color: transparentize($black, 0.7);
+	@include full;
+}
+.gallery_loop {
+	@include wrap;
+}
+.submit_photos {
+	position: fixed;
+	right: 0;
+	top: 0;
+	&:link, &:visited {
+		// color:
+	}
+}
+.site-header {
+}
+.site-branding {
+	@extend %text-shadow;
+}
+.site-title {
+	text-decoration: none;
+	&:link, &:visited {
+		// color:
+	}
+}
+.site-description {}
+
+.entry-header {
+}
+.bx-wrapper {
+	background-color: transparentize($black, 0.7);
+	left: 0;
+	padding: 0.5em;
+	position: fixed;
+	top: 0;
+	z-index: index($z-gallery_stack, bx-wrapper);
+}
+.bx-prev, .bx-next {
+	position: fixed;
+	top: 50%;
+}
+.bx-prev {
+	left: 0;
+}
+.bx-next {
+	right: 0;
+}
+.gallery {
+	&--image_wrap {}
+	&--image {
+		display: block;
+		margin: 0 auto;
+	}
+}
+.gallery_nav_wrap {}
+$size-nav_square: 10em;
+.gallery_nav {
+	&--image {
+		background-size: cover;
+		background-position: center center;
+		display: block;
+		float: left;
+		height: $size-nav_square;
+		overflow: hidden;
+		width: $size-nav_square;
 	}
 }

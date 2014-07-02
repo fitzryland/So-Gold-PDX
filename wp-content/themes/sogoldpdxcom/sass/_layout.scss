@@ -42,7 +42,10 @@ $layouts: (
 		}
 	}
 }
-@mixin wrap() {
+@mixin full {
+	width: 100%;
+}
+@mixin wrap {
 	margin: 0 auto;
 	max-width: 80em;
 	padding: 1em;

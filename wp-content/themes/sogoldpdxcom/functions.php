@@ -45,14 +45,6 @@ function sogoldpdxcom_setup() {
 		'primary' => __( 'Primary Menu', 'sogoldpdxcom' ),
 	) );
 
-	// Enable support for Post Formats.
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
-
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'sogoldpdxcom_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array(
@@ -103,6 +95,8 @@ function sogoldpdxcom_scripts() {
 
 	wp_enqueue_script( 'sogoldpdxcom-skip-link-focus-fix', get_template_directory_uri() . '/js/lib/skip-link-focus-fix.js', array(), '20130115', true );
 
+	wp_enqueue_script( 'bx-slider', get_template_directory_uri() . '/js/lib/jquery.bxslider.js', array(), '20130115', true );
+
 	wp_enqueue_script( 'sogoldpdxcom-main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '20120206', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -111,10 +105,6 @@ function sogoldpdxcom_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'sogoldpdxcom_scripts' );
 
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -126,12 +116,13 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/extras.php';
 
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Load Jetpack compatibility file.
+ * Custom Post Type Registration
  */
-require get_template_directory() . '/inc/jetpack.php';
+require get_template_directory() . '/functions-cpt.php';
+
+/**
+ * Helpers!
+ */
+require get_template_directory() . '/functions-helpers.php';
