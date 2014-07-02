@@ -25,6 +25,7 @@ jQuery(document).ready(function() {
 		$galleryImages = jQuery('.gallery--image'),
 		$navImage = jQuery('.gallery_nav--image'),
 		$galleryClose = jQuery('#gallery_close_id'),
+		$galleryObj = jQuery('#gallery_id'),
 		imagePad = 16,
 		$slider,
 		galleryWrap = function() {
@@ -35,7 +36,7 @@ jQuery(document).ready(function() {
 					.width(winWidth)
 					.height(winHeight);
 			}
-		};
+		},
 		fitImage = function(images, container) {
 			var contH = container.height(),
 				contW = container.width(),
@@ -51,9 +52,18 @@ jQuery(document).ready(function() {
 						$image.height(contH - imagePad);
 						$image.attr("width", "auto");
 					} else { // Container wider than Image
-						$image.attr("height", "auto");
 						$image.width(contW - imagePad);
+						$image.attr("height", "auto");
 					}
+			}
+		},
+		galleryFade = function(toggle) {
+			if ( toggle == "out" ) {
+				$slider.fadeOut();
+				$galleryClose.fadeOut();
+			} else if ( toggle == "in" ) {
+				$slider.fadeIn();
+				$galleryClose.fadeIn();
 			}
 		};
 
@@ -73,11 +83,11 @@ jQuery(document).ready(function() {
 		}, 200);
 	});
 
-	jQuery('#gallery_id').bxSlider({
+	$galleryObj.bxSlider({
 		pagerCustom: '#gallery_nav_id',
 		onSliderLoad: function() {
 			$slider = jQuery('.bx-wrapper');
-			$slider.fadeOut();
+			galleryFade("out");
 			galleryWrap();
 			fitImage($galleryImages, $win);
 		},
@@ -86,10 +96,10 @@ jQuery(document).ready(function() {
 	});
 
 	$navImage.click(function() {
-		$slider.fadeIn();
+		galleryFade("in");
 	});
 	$galleryClose.click(function() {
-		$slider.fadeOut();
+		galleryFade("out");
 	});
 
 });

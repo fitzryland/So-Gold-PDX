@@ -70,7 +70,7 @@
 .entry-header {
 }
 .bx-wrapper {
-	background-color: transparentize($black, 0.7);
+	background-color: transparentize($black, 0.2);
 	left: 0;
 	padding: 0.5em;
 	position: fixed;
@@ -83,17 +83,31 @@
 }
 .bx-prev {
 	left: 0;
+	padding: 2em;
 }
 .bx-next {
+	padding: 2em;
 	right: 0;
 }
 .gallery {
 	&--image_wrap {}
 	&--close {
+		background-color: transparent;
+		border: 1px solid $white;
+		box-shadow: none;
+		color: $white;
+		margin: 2em;
 		position: fixed;
 		right: 0;
+		text-shadow: none;
 		top: 0;
 		z-index: index($z-gallery_stack, gallery--close);
+		&:hover {
+			box-shadow: none;
+		}
+		.admin-bar & {
+			margin-top: 4.7em;
+		}
 	}
 	&--image {
 		display: block;
@@ -103,13 +117,34 @@
 .gallery_nav_wrap {}
 $size-nav_square: 10em;
 .gallery_nav {
+	@include wrap;
+	padding: 0.5em;
 	&--image {
 		background-size: cover;
 		background-position: center center;
 		display: block;
 		float: left;
 		height: $size-nav_square;
+		margin-bottom: 1em;
 		overflow: hidden;
 		width: $size-nav_square;
+		@include bp(small) {
+			@include span(2);
+			&.nth-2 {
+				margin-right: 0;
+			}
+		}
+		@include bp(medium) {
+			@include span(3);
+			&.nth-3 {
+				margin-right: 0;
+			}
+		}
+		@include bp(large) {
+			@include span(3);
+			&.nth-4 {
+				margin-right: 0;
+			}
+		}
 	}
 }

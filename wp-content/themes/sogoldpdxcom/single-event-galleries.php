@@ -31,8 +31,13 @@ get_header(); ?>
           </div>
           <div class="gallery_nav" id="gallery_nav_id">
             <?php
-            foreach ( $photos as $key => $photo ) : ?>
-              <a class="gallery_nav--image" data-slide-index="<?php echo $key; ?>" href="" style="background-image: url(<?php echo $photo['image']['sizes']['large']; ?>)"></a>
+            foreach ( $photos as $key => $photo ) :
+              $imageClass = 'gallery_nav--image';
+              $imageClass .= ( ($key + 1) % 4 == 0 ? ' nth-4': '' );
+              $imageClass .= ( ($key + 1) % 3 == 0 ? ' nth-3': '' );
+              $imageClass .= ( ($key + 1) % 2 == 0 ? ' nth-2': '' );
+              ?>
+              <a class="<?php echo $imageClass; ?>" data-slide-index="<?php echo $key; ?>" href="" style="background-image: url(<?php echo $photo['image']['sizes']['large']; ?>)"></a>
             <?php endforeach; ?>
           </div>
         </div>

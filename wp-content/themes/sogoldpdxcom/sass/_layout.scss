@@ -13,7 +13,7 @@ $layouts: (
 	small: (
 		break: 0em 37.5em,
 		grid: (
-			columns: 5,
+			columns: 4,
 		)
 	),
 	medium: (
@@ -25,7 +25,7 @@ $layouts: (
 	large: (
 		break: 62em,
 		grid: (
-			columns: 18,
+			columns: 12,
 		),
 		fallback: ".lt-ie9"
 	)
