@@ -19,9 +19,12 @@
 	&--title_block_wrap {}
 	&--title_block {
 		@include group;
+		background-image: url(img/logo_0.png);
+		background-repeat: no-repeat;
+		background-position: center 200px;
 		background-color: $blackTrans;
 		display: inline-block;
-		padding: 2em 2em 3em 2em;
+		padding: 2em 2em 12em 2em;
 		position: relative;
 	}
 	&--title {
@@ -56,6 +59,7 @@
 		position: absolute;
 		width: 100%;
 	}
+	&--logo {}
 }
 .gallery_loop_wrap {
 	background-color: $blackTrans;

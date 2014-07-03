@@ -22,9 +22,10 @@
 			<div class="home_header--title_block" id="title_block_id">
 				<h1 class="home_header--title"><?php bloginfo( 'name' ); ?></h1>
 				<h2 class="home_header--description"><?php bloginfo( 'description' ); ?></h2>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>submit" class="submit_photos">Submit Photos</a>
-				<button class="event_photos_button" id="event_photos_button_id">Event Photos</button>
-				<div class="home_header--speckel"></div>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>submit" class="submit_photos">submit photos</a>
+				<a href="" class="event_photos_button" id="event_photos_button_id">view photos</a>
+				<!-- <div class="home_header--speckel"></div> -->
+				<div class="home_header--logo"></div>
 			</div>
 		</div>
 	</header><!-- #masthead -->
