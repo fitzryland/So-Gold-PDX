@@ -22,6 +22,7 @@
 		background-color: $blackTrans;
 		display: inline-block;
 		padding: 2em 2em 3em 2em;
+		position: relative;
 	}
 	&--title {
 		font-size: 2.9em;
@@ -42,6 +43,18 @@
 		@include bp(large) {
 			font-size: 4em;
 		}
+	}
+	&--speckel {
+		animation: glimmer-stepper 50s steps(3) infinite;
+		// transition-timing: linear;
+
+		background-image: url(img/goldSpeckle.png);
+		background-position: 0 12px;
+		bottom: 0;
+		height: 24px;
+		left: 0;
+		position: absolute;
+		width: 100%;
 	}
 }
 .gallery_loop_wrap {

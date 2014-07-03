@@ -24,6 +24,7 @@
 				<h2 class="home_header--description"><?php bloginfo( 'description' ); ?></h2>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>submit" class="submit_photos">Submit Photos</a>
 				<button class="event_photos_button" id="event_photos_button_id">Event Photos</button>
+				<div class="home_header--speckel"></div>
 			</div>
 		</div>
 	</header><!-- #masthead -->

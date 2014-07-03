@@ -64,3 +64,13 @@ $z-gallery_stack: bx-wrapper, gallery--close;
 		box-shadow: none;
 	}
 }
+
+@keyframes glimmer-stepper {
+	0% { background-position: center 0px; }
+	// 16% { background-position: center 12px; }
+	// 34% { background-position: center 24px; }
+	// 50% { background-position: center 36px; }
+	// 66% { background-position: center 48px; }
+	// 83% { background-position: center 60px; }
+	100% { background-position: center 72px; }
+}

@@ -32,6 +32,25 @@ Text Domain: sogoldpdxcom
   box-shadow: none;
 }
 
+@-webkit-keyframes glimmer-stepper {
+  0% {
+    background-position: center 0px;
+  }
+
+  100% {
+    background-position: center 72px;
+  }
+}
+
+@keyframes glimmer-stepper {
+  0% {
+    background-position: center 0px;
+  }
+
+  100% {
+    background-position: center 72px;
+  }
+}
 /*
 Theme Name: _s
 Theme URI: http://underscores.me/
@@ -809,6 +828,7 @@ button {
   background-color: rgba(0, 0, 0, 0.3);
   display: inline-block;
   padding: 2em 2em 3em 2em;
+  position: relative;
 }
 .home_header--title_block:after {
   content: "";
@@ -848,6 +868,17 @@ button {
 }
 .lt-ie9 .home_header--description {
   font-size: 4em;
+}
+.home_header--speckel {
+  -webkit-animation: glimmer-stepper 50s steps(3) infinite;
+  animation: glimmer-stepper 50s steps(3) infinite;
+  background-image: url(img/goldSpeckle.png);
+  background-position: 0 12px;
+  bottom: 0;
+  height: 24px;
+  left: 0;
+  position: absolute;
+  width: 100%;
 }
 
 .gallery_loop_wrap {
