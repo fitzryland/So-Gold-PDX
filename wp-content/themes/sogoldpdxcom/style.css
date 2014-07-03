@@ -11,6 +11,23 @@ Text Domain: sogoldpdxcom
   text-shadow: 0.1em 0.1em 0 white;
 }
 
+.submit_photos, .event_photos_button, .gallery--close {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 0.2em;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: white;
+  margin: 2em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  text-shadow: none;
+}
+.submit_photos:hover, .event_photos_button:hover, .gallery--close:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 /*
 Theme Name: _s
 Theme URI: http://underscores.me/
@@ -331,8 +348,6 @@ input[type="submit"] {
   /* Improves usability and consistency of cursor style between image-type 'input' and others */
   -webkit-appearance: button;
   /* Corrects inability to style clickable 'input' types in iOS */
-  font-size: 12px;
-  font-size: 1.2rem;
   line-height: 1;
   padding: .6em 1em .4em;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -737,6 +752,7 @@ object {
 
 body {
   background-attachment: fixed;
+  background-color: #cad9ec;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -748,10 +764,6 @@ body {
   height: 100%;
 }
 
-a {
-  text-decoration: none;
-  text-shadow: 1px 1px 0px black, 1px 0px 0px black, 0px 1px 0px black, -1px 0px 0px black, 0px -1px 0px black, -1px -1px 0px black;
-}
 a:link, a:visited {
   color: white;
 }
@@ -840,13 +852,45 @@ button {
 }
 
 .submit_photos {
-  position: fixed;
-  right: 0;
-  top: 0;
+  padding-bottom: 0.6em;
+  text-align: right;
+}
+
+.site_header_wrap {
+  background-color: #404040;
+  width: 100%;
+}
+
+.site_header {
+  margin: 0 auto;
+  max-width: 80em;
+  padding: 1em;
 }
 
 .site-title {
+  clear: none;
+  display: inline;
+  font-size: 1.5em;
+  font-weight: 700;
   text-decoration: none;
+}
+.site-title a {
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.site-description {
+  color: white;
+  clear: none;
+  display: inline;
+  font-size: 1.5em;
+  margin-left: 0.2em;
+  text-shadow: none;
+}
+
+.entry-title {
+  font-size: 2.5em;
+  text-align: center;
 }
 
 .bx-wrapper {
@@ -874,21 +918,10 @@ button {
 }
 
 .gallery--close {
-  background-color: transparent;
-  border: 1px solid white;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  color: white;
-  margin: 2em;
   position: fixed;
   right: 0;
-  text-shadow: none;
   top: 0;
   z-index: 2;
-}
-.gallery--close:hover {
-  -webkit-box-shadow: none;
-  box-shadow: none;
 }
 .admin-bar .gallery--close {
   margin-top: 4.7em;

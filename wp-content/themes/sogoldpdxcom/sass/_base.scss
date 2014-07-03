@@ -2,6 +2,7 @@
 // This file includes the application of styles that will affect the elements that will be repeated throughout the application.
 body {
 	background-attachment: fixed;
+  background-color: $lightBlue;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -13,15 +14,15 @@ body {
 }
 a {
   // font-weight: 700;
-  text-decoration: none;
-  text-shadow:
+  // text-decoration: none;
+  // text-shadow:
     // 2px 2px 0px $black;
-    1px 1px 0px $black,
-    1px 0px 0px $black,
-    0px 1px 0px $black,
-    -1px 0px 0px $black,
-    0px -1px 0px $black,
-    -1px -1px 0px $black;
+    // 1px 1px 0px $black,
+    // 1px 0px 0px $black,
+    // 0px 1px 0px $black,
+    // -1px 0px 0px $black,
+    // 0px -1px 0px $black,
+    // -1px -1px 0px $black;
   &:link, &:visited {
     color: $white;
   }

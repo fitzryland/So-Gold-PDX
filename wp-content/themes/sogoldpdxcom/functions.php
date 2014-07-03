@@ -106,10 +106,22 @@ function sogoldpdxcom_scripts() {
 add_action( 'wp_enqueue_scripts', 'sogoldpdxcom_scripts' );
 
 
+function add_editor_style_function() {
+  add_editor_style('style.css');
+}
+add_action('init', 'add_editor_style_function');
+
 /**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
+
+
+
+/**
+ * Load Jetpack compatibility file.
+ */
+require get_template_directory() . '/inc/jetpack.php';
 
 /**
  * Custom functions that act independently of the theme templates.

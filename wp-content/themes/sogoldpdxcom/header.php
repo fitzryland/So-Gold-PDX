@@ -18,16 +18,16 @@
 <?php wp_head(); ?>
 </head>
 <?php $bgImage = get_field('background_image', 'option'); ?>
-<body <?php body_class(); ?> style="background-image: url(<?php echo $bgImage['url']; ?>);">
+<body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>submit" class="submit_photos">Submit Photos</a>
-
-	</header><!-- #masthead -->
+  <div class="site_header_wrap">
+  	<header id="masthead" class="site_header" role="banner">
+  		<div class="site-branding">
+  			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+  			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+  		</div>
+  		<a href="<?php echo esc_url( home_url( '/' ) ); ?>submit" class="submit_photos">Submit Photos</a>
+  	</header><!-- #masthead -->
+  </div>
 
 	<div id="content" class="site-content">

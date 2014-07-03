@@ -47,27 +47,51 @@
 	@include wrap;
 }
 .submit_photos {
-	position: fixed;
-	right: 0;
-	top: 0;
-	&:link, &:visited {
-		// color:
-	}
+	@extend %button;
+	padding-bottom: 0.6em;
+	text-align: right;
 }
-.site-header {
+.event_photos_button {
+	@extend %button;
+}
+.site_header_wrap {
+	background-color: $darkGray;
+	@include full;
+}
+.site_header {
+	@include wrap;
 }
 .site-branding {
 	@extend %text-shadow;
 }
 .site-title {
+	clear: none;
+	display: inline;
+	font-size: 1.5em;
+	font-weight: 700;
 	text-decoration: none;
+	a {
+		text-decoration: none;
+		text-shadow: none;
+	}
 	&:link, &:visited {
 		// color:
 	}
 }
-.site-description {}
+.site-description {
+	color: $white;
+	clear: none;
+	display: inline;
+	font-size: 1.5em;
+	margin-left: 0.2em;
+	text-shadow: none;
+}
 
 .entry-header {
+}
+.entry-title {
+	font-size: 2.5em;
+	text-align: center;
 }
 .bx-wrapper {
 	background-color: transparentize($black, 0.2);
@@ -92,19 +116,11 @@
 .gallery {
 	&--image_wrap {}
 	&--close {
-		background-color: transparent;
-		border: 1px solid $white;
-		box-shadow: none;
-		color: $white;
-		margin: 2em;
+		@extend %button;
 		position: fixed;
 		right: 0;
-		text-shadow: none;
 		top: 0;
 		z-index: index($z-gallery_stack, gallery--close);
-		&:hover {
-			box-shadow: none;
-		}
 		.admin-bar & {
 			margin-top: 4.7em;
 		}
