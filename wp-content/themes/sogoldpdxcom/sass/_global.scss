@@ -2,8 +2,9 @@
 // This file contains all non printing styles other than layout.
 $white: #ffffff;
 $black: #000000;
-$gray: #a3a3a3;
 $darkGray: #404040;
+$blackTrans: transparentize($black, 0.7);
+$gray: #a3a3a3;
 $pink: #df00db;
 $darkPink: #bb00ba;
 $lightBlue: #cad9ec;
@@ -50,12 +51,16 @@ $z-gallery_stack: bx-wrapper, gallery--close;
 	border-radius: 0.2em;
 	box-shadow: none;
 	color: $white;
-	// font-size: 1em;
-	margin: 2em;
+	display: inline;
+	font-weight: 300;
+	line-height: 1.5em;
+	// margin: 2em;
+	margin: 0;
 	padding: 0.5em 1em;
 	text-decoration: none;
 	text-shadow: none;
 	&:hover {
+		border: 1px solid $white;
 		box-shadow: none;
 	}
 }

@@ -7,7 +7,7 @@ Description: A theme for So Gold PDX
 Version: 0.
 Text Domain: sogoldpdxcom
 */
-.home_header, .site-branding {
+.site-branding {
   text-shadow: 0.1em 0.1em 0 white;
 }
 
@@ -18,12 +18,16 @@ Text Domain: sogoldpdxcom
   -webkit-box-shadow: none;
   box-shadow: none;
   color: white;
-  margin: 2em;
+  display: inline;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin: 0;
   padding: 0.5em 1em;
   text-decoration: none;
   text-shadow: none;
 }
 .submit_photos:hover, .event_photos_button:hover, .gallery--close:hover {
+  border: 1px solid white;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -179,7 +183,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Lato", Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -779,6 +783,7 @@ button {
 }
 
 .home_header {
+  color: white;
   line-height: 3em;
   text-align: center;
 }
@@ -799,6 +804,11 @@ button {
 }
 .lt-ie9 .home_header {
   line-height: 5em;
+}
+.home_header--title_block {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  padding: 2em 2em 3em 2em;
 }
 .home_header--title_block:after {
   content: "";
@@ -842,6 +852,7 @@ button {
 
 .gallery_loop_wrap {
   background-color: rgba(0, 0, 0, 0.3);
+  border-top: 0.5em solid white;
   width: 100%;
 }
 
@@ -852,8 +863,16 @@ button {
 }
 
 .submit_photos {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: inline;
   padding-bottom: 0.6em;
   text-align: right;
+}
+
+.event_photos_button {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: inline;
+  padding-bottom: 0.6em;
 }
 
 .site_header_wrap {

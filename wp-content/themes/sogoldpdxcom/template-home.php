@@ -18,12 +18,14 @@
 <div id="page" class="hfeed site">
 
 	<header id="home_header_id" class="home_header" role="banner">
-		<div class="home_header--title_block" id="title_block_id">
-			<h1 class="home_header--title"><?php bloginfo( 'name' ); ?></h1>
-			<h2 class="home_header--description"><?php bloginfo( 'description' ); ?></h2>
+		<div class="home_header--title_block_wrap">
+			<div class="home_header--title_block" id="title_block_id">
+				<h1 class="home_header--title"><?php bloginfo( 'name' ); ?></h1>
+				<h2 class="home_header--description"><?php bloginfo( 'description' ); ?></h2>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>submit" class="submit_photos">Submit Photos</a>
+				<button class="event_photos_button" id="event_photos_button_id">Event Photos</button>
+			</div>
 		</div>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>submit" class="submit_photos">Submit Photos</a>
-		<button class="event_photos_button" id="event_photos_button_id">Event Photos</button>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

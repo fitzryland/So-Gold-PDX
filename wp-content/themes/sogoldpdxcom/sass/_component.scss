@@ -5,7 +5,8 @@
 	@include group;
 }
 .home_header {
-	@extend %text-shadow;
+	// @extend %text-shadow;
+	color: $white;
 	line-height: 3em;
 	text-align: center;
 	@include group;
@@ -15,8 +16,12 @@
 	@include bp(large) {
 		line-height: 5em;
 	}
+	&--title_block_wrap {}
 	&--title_block {
 		@include group;
+		background-color: $blackTrans;
+		display: inline-block;
+		padding: 2em 2em 3em 2em;
 	}
 	&--title {
 		font-size: 2.9em;
@@ -40,7 +45,8 @@
 	}
 }
 .gallery_loop_wrap {
-	background-color: transparentize($black, 0.7);
+	background-color: $blackTrans;
+	border-top: 0.5em solid $white;
 	@include full;
 }
 .gallery_loop {
@@ -48,11 +54,16 @@
 }
 .submit_photos {
 	@extend %button;
+	background-color: $blackTrans;
+	display: inline;
 	padding-bottom: 0.6em;
 	text-align: right;
 }
 .event_photos_button {
 	@extend %button;
+	background-color: $blackTrans;
+	display: inline;
+	padding-bottom: 0.6em;
 }
 .site_header_wrap {
 	background-color: $darkGray;
