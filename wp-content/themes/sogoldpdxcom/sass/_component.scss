@@ -63,7 +63,7 @@
 }
 .gallery_loop_wrap {
 	background-color: $blackTrans;
-	border-top: 0.5em solid $white;
+	// border-top: 0.5em solid $white;
 	@include full;
 }
 $layout-two_column: (columns: 2, gutters: 0.05);

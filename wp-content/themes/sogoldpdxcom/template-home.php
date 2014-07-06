@@ -18,7 +18,7 @@
 <div id="page" class="hfeed site">
 
 	<header id="home_header_id" class="home_header" role="banner">
-		<div class="home_header--title_block_wrap">
+		<div class="home_header--title_block_wrap" id="title_block_wrap_id">
 			<div class="home_header--title_block" id="title_block_id">
 				<h1 class="home_header--title"><?php bloginfo( 'name' ); ?></h1>
 				<h2 class="home_header--description"><?php bloginfo( 'description' ); ?></h2>

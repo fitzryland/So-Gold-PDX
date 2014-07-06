@@ -7,16 +7,17 @@ jQuery(document).ready(function() {
 
 	// Home
 	var $homeHeader = jQuery('#home_header_id'),
-		$titleBlock = jQuery('#title_block_id'),
 		marginTopOffset,
 		homeHeader = function() {
 			if ( $body.hasClass('home') ) {
-				var winHeight = $win.height(),
-						titleBlockHeight = $titleBlock.height();
-						titleBlockMargin = (winHeight - titleBlockHeight) / 2;
-				$homeHeader
-					.height(winHeight)
-					.css({paddingTop: titleBlockMargin});
+				var windowHeight = jQuery(window).height(),
+						titleBlockHeight = jQuery('#title_block_wrap_id').height(),
+						titleBlockMargin = (windowHeight - titleBlockHeight) / 2,
+						headerHeight = windowHeight - titleBlockMargin;
+				$homeHeader.css({
+					height: headerHeight,
+					marginTop: titleBlockMargin
+				});
 			}
 		};
 
