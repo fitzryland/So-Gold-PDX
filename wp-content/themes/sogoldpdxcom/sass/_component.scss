@@ -117,6 +117,7 @@ $layout-two_column: (columns: 2, gutters: 0.05);
 	background-color: $blackTrans;
 	display: inline;
 	float: right;
+	margin: 0;
 	padding-bottom: 0.6em;
 	text-align: right;
 	@include bp(small) {

@@ -20,7 +20,7 @@ Text Domain: sogoldpdxcom
   display: inline;
   font-weight: 300;
   line-height: 1.5em;
-  margin: 0;
+  margin: 2em;
   padding: 0.5em 1em;
   text-decoration: none;
   text-shadow: none;
@@ -945,6 +945,7 @@ button {
   background-color: rgba(0, 0, 0, 0.8);
   display: inline;
   float: right;
+  margin: 0;
   padding-bottom: 0.6em;
   text-align: right;
 }

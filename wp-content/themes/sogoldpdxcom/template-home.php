@@ -23,8 +23,7 @@
 				<h1 class="home_header--title"><?php bloginfo( 'name' ); ?></h1>
 				<h2 class="home_header--description"><?php bloginfo( 'description' ); ?></h2>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>submit" class="submit_photos_home">submit photos</a>
-				<a href="" class="event_photos_button" id="event_photos_button_id">view photos</a>
-				<!-- <div class="home_header--speckel"></div> -->
+				<a href="#photos" class="event_photos_button" id="event_photos_button_id">view photos</a>
 				<div class="home_header--logo"></div>
 			</div>
 		</div>
@@ -33,7 +32,7 @@
 	<div id="content" class="site-content">
 
 
-	<div class="gallery_loop_wrap">
+	<div class="gallery_loop_wrap" id="photos">
 		<div class="gallery_loop">
 			<h3 class="gallery_loop--title">events</h3>
 			<?php
@@ -47,7 +46,7 @@
 				$gallery_link_class .= ( $gallery_link_index % 2 == 0 ? ' index_2' : '' );
 				$gallery_link_class .= ( $gallery_link_index % 3 == 0 ? ' index_3' : '' );
 				?>
-				<a class="<?php echo $gallery_link_class; ?>" href="<?php echo get_the_permalink(); ?>" title="<?php the_title(); ?>" style="background-image: url(<?php echo $thumbnailImage['sizes']['thumbnail']; ?>);">
+				<a class="<?php echo $gallery_link_class; ?>" href="<?php echo get_the_permalink(); ?>" title="<?php the_title(); ?>" style="background-image: url(<?php echo $thumbnailImage['sizes']['medium']; ?>);">
 					<?php the_title(); ?>
 				</a>
 			<?php endwhile; ?>

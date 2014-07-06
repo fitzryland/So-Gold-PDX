@@ -7,6 +7,7 @@ jQuery(document).ready(function() {
 
 	// Home
 	var $homeHeader = jQuery('#home_header_id'),
+		$viewPhotosButton = jQuery('#event_photos_button_id'),
 		marginTopOffset,
 		homeHeader = function() {
 			if ( $body.hasClass('home') ) {
@@ -20,7 +21,13 @@ jQuery(document).ready(function() {
 				});
 			}
 		};
-
+	$viewPhotosButton.click(function(e) {
+		e.preventDefault();
+		var curWindowHeight = jQuery(window).height();
+		$body.animate({
+			scrollTop: curWindowHeight
+		}, 2000);
+	});
 	// Gallery
 	var $galleryWrap = jQuery('#gallery_wrap_id'),
 		$galleryImages = jQuery('.gallery--image'),
@@ -43,7 +50,6 @@ jQuery(document).ready(function() {
 				contW = container.width(),
 				contRatio = contW / contH,
 				imgCount = images.length;
-				// console.log(images.length);
 			for ( var i = 0; i < imgCount; i++ ) {
 				var $image = jQuery(images[i]),
 					imageH = $image.height(),
@@ -68,11 +74,34 @@ jQuery(document).ready(function() {
 			}
 		};
 
+		$win.load(function() {
+			$galleryObj.bxSlider({
+				pagerCustom: '#gallery_nav_id',
+				useCSS: false,
+				onSliderLoad: function() {
+					$slider = jQuery('.bx-wrapper');
+					galleryFade("out");
+					galleryWrap();
+					// fitImage($galleryImages, $win);
+				},
+				onSlideBefore: function() {
+				}
+			});
+		});
+
+		$navImage.click(function() {
+			galleryFade("in");
+		});
+		$galleryClose.click(function() {
+			galleryFade("out");
+		});
+
 
 	// Initializations
 	homeHeader();
 
-// On Resize
+
+	// On Resize
 	$win.resize(function() {
 		clearTimeout(timer);
 		// throttle the resize check
@@ -84,26 +113,5 @@ jQuery(document).ready(function() {
 		}, 200);
 	});
 
-	$win.load(function() {
-		$galleryObj.bxSlider({
-			pagerCustom: '#gallery_nav_id',
-			useCSS: false,
-			onSliderLoad: function() {
-				$slider = jQuery('.bx-wrapper');
-				galleryFade("out");
-				galleryWrap();
-				// fitImage($galleryImages, $win);
-			},
-			onSlideBefore: function() {
-			}
-		});
-	});
-
-	$navImage.click(function() {
-		galleryFade("in");
-	});
-	$galleryClose.click(function() {
-		galleryFade("out");
-	});
 
 });
