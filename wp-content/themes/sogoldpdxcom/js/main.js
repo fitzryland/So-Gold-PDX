@@ -71,11 +71,11 @@ jQuery(document).ready(function() {
 				$slider.fadeOut();
 				$galleryClose.fadeOut(function() {
 					if ( firstFade ) {
-						for ( var imageI = 0; imageI < galleryImagesLength; imageI++ ) {
-							jQuery($galleryImages[imageI]).css({
-								opacity: 1
-							});
-						}
+						// for ( var imageI = 0; imageI < galleryImagesLength; imageI++ ) {
+						// 	jQuery($galleryImages[imageI]).css({
+						// 		opacity: 1
+						// 	});
+						// }
 					}
 					firstFade = false;
 				});

@@ -183,11 +183,14 @@ $layout-two_column: (columns: 2, gutters: 0.05);
 	z-index: 1000;
 }
 .entry-header {
+	text-align: center;
 }
 .entry-title {
+	background-color: $blackTrans;
+	display: inline-block;
 	font-size: 2.5em;
-	margin-top: 1em;
-	text-align: center;
+	margin: 1em 0;
+	padding: 0 1em;
 }
 .bx-wrapper {
 	background-color: transparentize($black, 0.2);

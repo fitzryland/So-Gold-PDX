@@ -1043,10 +1043,16 @@ button {
   z-index: 1000;
 }
 
-.entry-title {
-  font-size: 2.5em;
-  margin-top: 1em;
+.entry-header {
   text-align: center;
+}
+
+.entry-title {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  font-size: 2.5em;
+  margin: 1em 0;
+  padding: 0 1em;
 }
 
 .bx-wrapper {
