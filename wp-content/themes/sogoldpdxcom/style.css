@@ -11,7 +11,7 @@ Text Domain: sogoldpdxcom
   text-shadow: 0.1em 0.1em 0 white;
 }
 
-.submit_photos, .event_photos_button, .gallery--close {
+.submit_photos_home, .submit_photos, .event_photos_button, .gallery--close {
   background-color: transparent;
   border: 1px solid white;
   border-radius: 0.2em;
@@ -26,7 +26,7 @@ Text Domain: sogoldpdxcom
   text-decoration: none;
   text-shadow: none;
 }
-.submit_photos:hover, .event_photos_button:hover, .gallery--close:hover {
+.submit_photos_home:hover, .submit_photos:hover, .event_photos_button:hover, .gallery--close:hover {
   border: 1px solid white;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -775,7 +775,7 @@ object {
 
 body {
   background-attachment: fixed;
-  background-color: #cad9ec;
+  background-color: rgba(0, 0, 0, 0.8);
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -804,6 +804,7 @@ button {
 .home_header {
   color: white;
   line-height: 3em;
+  overflow: hidden;
   text-align: center;
 }
 .home_header:after {
@@ -828,7 +829,7 @@ button {
   background-image: url(img/logo_0.png);
   background-repeat: no-repeat;
   background-position: center 200px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.8);
   display: inline-block;
   padding: 2em 2em 12em 2em;
   position: relative;
@@ -885,7 +886,7 @@ button {
 }
 
 .gallery_loop_wrap {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.8);
   border-top: 0.5em solid white;
   width: 100%;
 }
@@ -895,16 +896,87 @@ button {
   max-width: 80em;
   padding: 1em;
 }
+.gallery_loop:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.gallery_loop--title {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+.gallery_loop--thumbnail {
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  font-size: 1.5em;
+  height: 150px;
+  margin-bottom: 1em;
+  text-align: center;
+  text-decoration: none;
+}
+.gallery_loop--thumbnail:hover {
+  text-decoration: underline;
+}
+@media (min-width: 0em) and (max-width: 37.5em) {
+  .gallery_loop--thumbnail {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 62em) {
+  .gallery_loop--thumbnail {
+    width: 48.78049%;
+    float: left;
+    margin-right: 2.43902%;
+  }
+  .gallery_loop--thumbnail.index_2 {
+    margin-right: 0;
+  }
+}
+@media (min-width: 62em) {
+  .gallery_loop--thumbnail {
+    width: 32.39437%;
+    float: left;
+    margin-right: 1.40845%;
+  }
+  .gallery_loop--thumbnail.index_3 {
+    margin-right: 0;
+  }
+}
+.lt-ie9 .gallery_loop--thumbnail {
+  width: 32.39437%;
+  float: left;
+  margin-right: 1.40845%;
+}
+.lt-ie9 .gallery_loop--thumbnail.index_3 {
+  margin-right: 0;
+}
+
+.submit_photos_home {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: inline;
+  padding-bottom: 0.6em;
+}
 
 .submit_photos {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.8);
   display: inline;
+  float: right;
   padding-bottom: 0.6em;
   text-align: right;
 }
+@media (min-width: 0em) and (max-width: 37.5em) {
+  .submit_photos {
+    display: none;
+  }
+}
 
 .event_photos_button {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.8);
   display: inline;
   padding-bottom: 0.6em;
 }
@@ -918,6 +990,25 @@ button {
   margin: 0 auto;
   max-width: 80em;
   padding: 1em;
+}
+.site_header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 0em) and (max-width: 37.5em) {
+  .site_header {
+    text-align: center;
+  }
+}
+
+.site-branding {
+  font-size: 1.1em;
+}
+@media (min-width: 37.5em) {
+  .site-branding {
+    float: left;
+  }
 }
 
 .site-title {
@@ -943,6 +1034,7 @@ button {
 
 .entry-title {
   font-size: 2.5em;
+  margin-top: 1em;
   text-align: center;
 }
 

@@ -5,9 +5,9 @@
 	@include group;
 }
 .home_header {
-	// @extend %text-shadow;
 	color: $white;
 	line-height: 3em;
+	overflow: hidden;
 	text-align: center;
 	@include group;
 	@include bp(medium) {
@@ -66,15 +66,62 @@
 	border-top: 0.5em solid $white;
 	@include full;
 }
+$layout-two_column: (columns: 2, gutters: 0.05);
 .gallery_loop {
 	@include wrap;
+	@include group;
+	&--title {
+		color: $white;
+		font-size: 2em;
+		text-align: center;
+	}
+	&--thumbnail {
+		background-position: center center;
+		background-size: cover;
+		font-size: 1.5em;
+		height: 150px;
+		margin-bottom: 1em;
+		text-align: center;
+		text-decoration: none;
+		&:link, &:visited {
+			// color: $blackTrans;
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+		@include bp(small) {
+			@include span(4);
+		}
+		@include bp(medium) {
+			@include span(1 $layout-two_column);
+			&.index_2 {
+				margin-right: 0;
+			}
+		}
+		@include bp(large) {
+			@include span(4);
+			&.index_3 {
+				margin-right: 0;
+			}
+		}
+	}
+}
+.submit_photos_home {
+	@extend %button;
+	background-color: $blackTrans;
+	display: inline;
+	padding-bottom: 0.6em;
 }
 .submit_photos {
 	@extend %button;
 	background-color: $blackTrans;
 	display: inline;
+	float: right;
 	padding-bottom: 0.6em;
 	text-align: right;
+	@include bp(small) {
+		display: none;
+	}
 }
 .event_photos_button {
 	@extend %button;
@@ -88,9 +135,17 @@
 }
 .site_header {
 	@include wrap;
+	@include group;
+	@include bp(small) {
+		text-align: center;
+	}
 }
 .site-branding {
 	@extend %text-shadow;
+	font-size: 1.1em;
+	@include bp(medium-andup) {
+		float: left;
+	}
 }
 .site-title {
 	clear: none;
@@ -119,6 +174,7 @@
 }
 .entry-title {
 	font-size: 2.5em;
+	margin-top: 1em;
 	text-align: center;
 }
 .bx-wrapper {

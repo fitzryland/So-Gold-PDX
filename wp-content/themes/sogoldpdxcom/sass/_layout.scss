@@ -22,6 +22,12 @@ $layouts: (
 			columns: 9,
 		)
 	),
+	medium-andup: (
+		break: 37.5em,
+		grid: (
+			columns: 9,
+		)
+	),
 	large: (
 		break: 62em,
 		grid: (
