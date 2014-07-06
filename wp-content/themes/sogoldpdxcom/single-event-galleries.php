@@ -9,7 +9,7 @@ get_header(); ?>
 
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-
+    <div class="loading_overlay" id="loading_overlay_id">loading...</div>
     <?php while ( have_posts() ) : the_post(); ?>
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

@@ -1471,6 +1471,8 @@ jQuery(document).ready(function() {
 		$galleryClose = jQuery('#gallery_close_id'),
 		$galleryObj = jQuery('#gallery_id'),
 		imagePad = 16,
+		galleryImagesLength = $galleryImages.length,
+		firstFade = true,
 		$slider,
 		galleryWrap = function() {
 			if ( $body.hasClass('single-event-galleries') ) {
@@ -1503,7 +1505,16 @@ jQuery(document).ready(function() {
 		galleryFade = function(toggle) {
 			if ( toggle == "out" ) {
 				$slider.fadeOut();
-				$galleryClose.fadeOut();
+				$galleryClose.fadeOut(function() {
+					if ( firstFade ) {
+						for ( var imageI = 0; imageI < galleryImagesLength; imageI++ ) {
+							jQuery($galleryImages[imageI]).css({
+								opacity: 1
+							});
+						}
+					}
+					firstFade = false;
+				});
 			} else if ( toggle == "in" ) {
 				$slider.fadeIn();
 				$galleryClose.fadeIn();

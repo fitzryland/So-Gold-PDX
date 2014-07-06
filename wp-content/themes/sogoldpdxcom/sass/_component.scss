@@ -170,6 +170,18 @@ $layout-two_column: (columns: 2, gutters: 0.05);
 	text-shadow: none;
 }
 
+
+.loading_overlay {
+	background-color: $blackTrans;
+	bottom: 0;
+	display: none;
+	left: 0;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	top: 0;
+	z-index: 1000;
+}
 .entry-header {
 }
 .entry-title {
@@ -212,6 +224,7 @@ $layout-two_column: (columns: 2, gutters: 0.05);
 	&--image {
 		display: block;
 		margin: 0 auto;
+		opacity: 0;
 	}
 }
 .gallery_nav_wrap {}
