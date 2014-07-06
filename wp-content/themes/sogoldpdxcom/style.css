@@ -1065,6 +1065,7 @@ button {
 }
 
 .bx-prev, .bx-next {
+  opacity: 0;
   position: fixed;
   top: 50%;
 }
@@ -1080,6 +1081,7 @@ button {
 }
 
 .gallery--close {
+  opacity: 0;
   position: fixed;
   right: 0;
   top: 0;

@@ -201,6 +201,7 @@ $layout-two_column: (columns: 2, gutters: 0.05);
 	z-index: index($z-gallery_stack, bx-wrapper);
 }
 .bx-prev, .bx-next {
+	opacity: 0;
 	position: fixed;
 	top: 50%;
 }
@@ -216,6 +217,7 @@ $layout-two_column: (columns: 2, gutters: 0.05);
 	&--image_wrap {}
 	&--close {
 		@extend %button;
+		opacity: 0;
 		position: fixed;
 		right: 0;
 		top: 0;

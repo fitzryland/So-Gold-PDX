@@ -34,8 +34,10 @@ jQuery(document).ready(function() {
 		$navImage = jQuery('.gallery_nav--image'),
 		$galleryClose = jQuery('#gallery_close_id'),
 		$galleryObj = jQuery('#gallery_id'),
+		$galleryNav = jQuery('.bx-next, .bx-prev'),
+		$galleryParts = $galleryImages.add($galleryClose).add($galleryNav),
 		imagePad = 16,
-		galleryImagesLength = $galleryImages.length,
+		galleryPartsLength = $galleryParts.length,
 		firstFade = true,
 		$slider,
 		galleryWrap = function() {
@@ -71,17 +73,20 @@ jQuery(document).ready(function() {
 				$slider.fadeOut();
 				$galleryClose.fadeOut(function() {
 					if ( firstFade ) {
-						// for ( var imageI = 0; imageI < galleryImagesLength; imageI++ ) {
-						// 	jQuery($galleryImages[imageI]).css({
-						// 		opacity: 1
-						// 	});
-						// }
+						displayGalleryParts();
 					}
 					firstFade = false;
 				});
 			} else if ( toggle == "in" ) {
 				$slider.fadeIn();
 				$galleryClose.fadeIn();
+			}
+		},
+		displayGalleryParts = function() {
+			for ( var partI = 0; partI < galleryPartsLength; partI++ ) {
+				jQuery($galleryParts[partI]).css({
+					opacity: 1
+				});
 			}
 		};
 
