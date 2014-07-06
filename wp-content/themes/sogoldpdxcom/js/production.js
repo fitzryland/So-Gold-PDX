@@ -1470,10 +1470,8 @@ jQuery(document).ready(function() {
 		$navImage = jQuery('.gallery_nav--image'),
 		$galleryClose = jQuery('#gallery_close_id'),
 		$galleryObj = jQuery('#gallery_id'),
-		$galleryNav = jQuery('.bx-next, .bx-prev'),
-		$galleryParts = $galleryImages.add($galleryClose).add($galleryNav),
+		$galleryParts = $galleryImages.add($galleryClose),
 		imagePad = 16,
-		galleryPartsLength = $galleryParts.length,
 		firstFade = true,
 		$slider,
 		galleryWrap = function() {
@@ -1519,6 +1517,8 @@ jQuery(document).ready(function() {
 			}
 		},
 		displayGalleryParts = function() {
+			$galleryParts = $galleryParts.add('.bx-next, .bx-prev');
+			var galleryPartsLength = $galleryParts.length;
 			for ( var partI = 0; partI < galleryPartsLength; partI++ ) {
 				jQuery($galleryParts[partI]).css({
 					opacity: 1
