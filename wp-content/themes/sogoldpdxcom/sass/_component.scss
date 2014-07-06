@@ -130,7 +130,7 @@ $layout-two_column: (columns: 2, gutters: 0.05);
 	padding-bottom: 0.6em;
 }
 .site_header_wrap {
-	background-color: $darkGray;
+	background-color: $blackTrans;
 	@include full;
 }
 .site_header {
@@ -162,7 +162,6 @@ $layout-two_column: (columns: 2, gutters: 0.05);
 	}
 }
 .site-description {
-	color: $white;
 	clear: none;
 	display: inline;
 	font-size: 1.5em;

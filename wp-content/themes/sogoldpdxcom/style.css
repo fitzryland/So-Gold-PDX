@@ -780,7 +780,7 @@ body {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  color: #404040;
+  color: white;
   font-family: "Lato", Helvetica, sans-serif;
   font-weight: 300;
   padding: 0;
@@ -981,7 +981,7 @@ button {
 }
 
 .site_header_wrap {
-  background-color: #404040;
+  background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
 }
 
@@ -1023,7 +1023,6 @@ button {
 }
 
 .site-description {
-  color: white;
   clear: none;
   display: inline;
   font-size: 1.5em;

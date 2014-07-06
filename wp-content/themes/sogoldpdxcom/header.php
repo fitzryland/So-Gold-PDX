@@ -18,7 +18,7 @@
 <?php wp_head(); ?>
 </head>
 <?php $bgImage = get_field('background_image', 'option'); ?>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> style="background-image: url(<?php echo $bgImage['url']; ?>);">
 <div id="page" class="hfeed site">
   <div class="site_header_wrap">
   	<header id="masthead" class="site_header" role="banner">
