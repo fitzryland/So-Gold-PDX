@@ -2,6 +2,7 @@ jQuery(document).ready(function() {
 	// Global
 	var $win = jQuery(window),
 		$body = jQuery('body'),
+		$testButton = jQuery('#test_button'),
 		timer;
 
 
@@ -38,6 +39,7 @@ jQuery(document).ready(function() {
 		imagePad = 16,
 		firstFade = true,
 		$slider,
+		slider,
 		galleryWrap = function() {
 			if ( $body.hasClass('single-event-galleries') ) {
 				var winHeight = $win.height(),
@@ -76,6 +78,7 @@ jQuery(document).ready(function() {
 					firstFade = false;
 				});
 			} else if ( toggle == "in" ) {
+				// jQuery(slider).resizeWindow(); // TODO slides to not resize while hidden
 				$slider.fadeIn();
 				$galleryClose.fadeIn();
 			}
@@ -91,7 +94,7 @@ jQuery(document).ready(function() {
 		};
 
 		$win.load(function() {
-			$galleryObj.bxSlider({
+			slider = $galleryObj.bxSlider({
 				pagerCustom: '#gallery_nav_id',
 				useCSS: false,
 				onSliderLoad: function() {
@@ -116,6 +119,9 @@ jQuery(document).ready(function() {
 	// Initializations
 	homeHeader();
 
+	$testButton.click(function() {
+		$slider.getSlideCount();
+	});
 
 	// On Resize
 	$win.resize(function() {
