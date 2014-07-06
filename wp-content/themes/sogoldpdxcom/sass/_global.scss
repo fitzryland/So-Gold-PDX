@@ -60,7 +60,7 @@ $z-gallery_stack: bx-wrapper, gallery--close;
 	text-shadow: none;
 	&:hover {
 		border: 1px solid $white;
-		box-shadow: none;
+		box-shadow: inset 0 1px 0 0 $white;
 	}
 }
 

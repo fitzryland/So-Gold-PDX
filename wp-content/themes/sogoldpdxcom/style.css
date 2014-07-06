@@ -28,8 +28,8 @@ Text Domain: sogoldpdxcom
 }
 .submit_photos_home:hover, .submit_photos:hover, .event_photos_button:hover, .gallery--close:hover {
   border: 1px solid white;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  -webkit-box-shadow: inset 0 1px 0 0 white;
+  box-shadow: inset 0 1px 0 0 white;
 }
 
 @-webkit-keyframes glimmer-stepper {
@@ -894,6 +894,7 @@ button {
   margin: 0 auto;
   max-width: 80em;
   padding: 1em;
+  padding-top: 2em;
 }
 .gallery_loop:after {
   content: "";
@@ -912,6 +913,7 @@ button {
   font-size: 1.5em;
   height: 150px;
   margin-bottom: 1em;
+  position: relative;
   text-align: center;
   text-decoration: none;
 }
@@ -953,6 +955,13 @@ button {
 }
 .lt-ie9 .gallery_loop--thumbnail.index_3 {
   margin-right: 0;
+}
+.gallery_loop--event_title {
+  background-color: rgba(0, 0, 0, 0.8);
+  bottom: 0.2em;
+  padding: 0 0.5em;
+  position: absolute;
+  right: 0;
 }
 
 .submit_photos_home {

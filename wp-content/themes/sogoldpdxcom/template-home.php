@@ -34,7 +34,7 @@
 
 	<div class="gallery_loop_wrap" id="photos">
 		<div class="gallery_loop">
-			<h3 class="gallery_loop--title">events</h3>
+			<!-- <h3 class="gallery_loop--title">events</h3> -->
 			<?php
 			$gallery_query_args = array( 'post_type' => 'event-galleries' );
 			$gallery_query = new WP_Query($gallery_query_args);
@@ -46,8 +46,10 @@
 				$gallery_link_class .= ( $gallery_link_index % 2 == 0 ? ' index_2' : '' );
 				$gallery_link_class .= ( $gallery_link_index % 3 == 0 ? ' index_3' : '' );
 				?>
-				<a class="<?php echo $gallery_link_class; ?>" href="<?php echo get_the_permalink(); ?>" title="<?php the_title(); ?>" style="background-image: url(<?php echo $thumbnailImage['sizes']['medium']; ?>);">
-					<?php the_title(); ?>
+				<a class="<?php echo $gallery_link_class; ?>" href="<?php echo get_the_permalink(); ?>" title="<?php the_title(); ?>" style="background-image: url(<?php echo $thumbnailImage['sizes']['large']; ?>);">
+					<span class="gallery_loop--event_title">
+						<?php the_title(); ?>
+					</span>
 				</a>
 			<?php endwhile; ?>
 		</div>

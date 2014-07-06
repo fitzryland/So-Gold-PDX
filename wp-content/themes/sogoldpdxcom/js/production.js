@@ -1463,7 +1463,7 @@ jQuery(document).ready(function() {
 		var curWindowHeight = jQuery(window).height();
 		$body.animate({
 			scrollTop: curWindowHeight
-		}, 2000);
+		}, 200);
 	});
 	// Gallery
 	var $galleryWrap = jQuery('#gallery_wrap_id'),

@@ -70,6 +70,7 @@ $layout-two_column: (columns: 2, gutters: 0.05);
 .gallery_loop {
 	@include wrap;
 	@include group;
+	padding-top: 2em;
 	&--title {
 		color: $white;
 		font-size: 2em;
@@ -81,6 +82,7 @@ $layout-two_column: (columns: 2, gutters: 0.05);
 		font-size: 1.5em;
 		height: 150px;
 		margin-bottom: 1em;
+		position: relative;
 		text-align: center;
 		text-decoration: none;
 		&:link, &:visited {
@@ -104,6 +106,13 @@ $layout-two_column: (columns: 2, gutters: 0.05);
 				margin-right: 0;
 			}
 		}
+	}
+	&--event_title {
+		background-color: $blackTrans;
+		bottom: 0.2em;
+		padding: 0 0.5em;
+		position: absolute;
+		right: 0;
 	}
 }
 .submit_photos_home {
