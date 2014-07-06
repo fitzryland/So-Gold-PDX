@@ -1516,20 +1516,23 @@ jQuery(document).ready(function() {
 			// do resize stuff here
 			homeHeader();
 			galleryWrap();
-			fitImage($galleryImages, jQuery(window));
+			// fitImage($galleryImages, jQuery(window));
 		}, 200);
 	});
 
-	$galleryObj.bxSlider({
-		pagerCustom: '#gallery_nav_id',
-		onSliderLoad: function() {
-			$slider = jQuery('.bx-wrapper');
-			galleryFade("out");
-			galleryWrap();
-			fitImage($galleryImages, $win);
-		},
-		onSlideBefore: function() {
-		}
+	$win.load(function() {
+		$galleryObj.bxSlider({
+			pagerCustom: '#gallery_nav_id',
+			useCSS: false,
+			onSliderLoad: function() {
+				$slider = jQuery('.bx-wrapper');
+				galleryFade("out");
+				galleryWrap();
+				// fitImage($galleryImages, $win);
+			},
+			onSlideBefore: function() {
+			}
+		});
 	});
 
 	$navImage.click(function() {
