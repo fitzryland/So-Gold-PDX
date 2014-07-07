@@ -117,13 +117,11 @@ $layout-two_column: (columns: 2, gutters: 0.05);
 }
 .submit_photos_home {
 	@extend %button;
-	background-color: $blackTrans;
 	display: inline;
 	padding-bottom: 0.6em;
 }
 .submit_photos {
 	@extend %button;
-	background-color: $blackTrans;
 	display: inline;
 	float: right;
 	margin: 0;
@@ -135,7 +133,6 @@ $layout-two_column: (columns: 2, gutters: 0.05);
 }
 .event_photos_button {
 	@extend %button;
-	background-color: $blackTrans;
 	display: inline;
 	padding-bottom: 0.6em;
 }

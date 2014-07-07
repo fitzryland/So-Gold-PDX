@@ -46,7 +46,7 @@ $z-gallery_stack: bx-wrapper, gallery--close;
 	text-shadow: 0.1em 0.1em 0 white;
 }
 %button {
-	background-color: transparent;
+	background-color: $blackTrans;
 	border: 1px solid $white;
 	border-radius: 0.2em;
 	box-shadow: none;

@@ -12,7 +12,7 @@ Text Domain: sogoldpdxcom
 }
 
 .submit_photos_home, .submit_photos, .event_photos_button, .gallery--close {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.8);
   border: 1px solid white;
   border-radius: 0.2em;
   -webkit-box-shadow: none;
@@ -965,13 +965,11 @@ button {
 }
 
 .submit_photos_home {
-  background-color: rgba(0, 0, 0, 0.8);
   display: inline;
   padding-bottom: 0.6em;
 }
 
 .submit_photos {
-  background-color: rgba(0, 0, 0, 0.8);
   display: inline;
   float: right;
   margin: 0;
@@ -985,7 +983,6 @@ button {
 }
 
 .event_photos_button {
-  background-color: rgba(0, 0, 0, 0.8);
   display: inline;
   padding-bottom: 0.6em;
 }
